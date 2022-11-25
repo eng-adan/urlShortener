@@ -1,0 +1,125 @@
+<div data-controller='home'>
+  <div class='w-3/5 mx-auto'>
+    <h1 class='text-center font-medium leading-tight text-5xl mt-0 mb-2 text-blue-600 dark:text-indigo-500'>URL Shortner</h1>
+
+    <%# Enter URL Box %>
+    <div class='border-2 drop-shadow-lg dark:shadow-white border-indigo-500 rounded-lg text-center dark:text-white pb-10 mb-4'>
+      <h3 class=' font-medium leading-tight text-3xl m-5 text-blue-600 dark:text-indigo-500'>Paste the URL to be shortened</h3>
+      <div class='flex justify-center items-center mb-5'>
+        <div class='w-3/4 relative'> 
+            <div class='absolute top-3 left-3'>
+                <i class='fas fa-search text-gray-400 z-20 hover:text-gray-500'></i>
+            </div>
+          <input type='text' class='w-full pl-10 pr-20 h-12 rounded-lg z-0 focus:shadow focus:outline-none text-black' placeholder='Enter URL...'>
+            <div class='absolute top-0 right-0 bottom-0'>
+                <button class='px-5 pt-2 h-12 pb-3 text-white rounded-lg bg-blue-500 hover:bg-blue-600'>Shorten URL</button>
+            </div>
+        </div>
+      </div>
+
+      <p class='text-sm'>ShortURL.at is a free tool to shorten a URL or reduce a link</p>
+      <p class='text-sm'>Use our URL Shortener to create a shortened link making it easy to remember</p>
+    </div>
+    <%# Enter URL Box %>
+
+    <div>
+      <div class='px-4 m-5 mt-10 dark:text-white'>
+        <h3 class='font-medium leading-tight text-2xl text-indigo-500'>Simple and fast URL shortener!</h3>
+        <p class='text-justify mt-2 text-base'>
+          ShortURL allows to reduce long links from Instagram, Facebook, YouTube, Twitter, Linked In and top sites on the 
+          Internet, just paste the long URL and click the Shorten URL button. On the next screen, copy the shortened URL and 
+          share it on websites, chat and e-mail. After shortening the URL, check how many clicks it received.
+        </p>
+      </div>
+
+      <div class='px-4 m-5 mt-10 dark:text-white'>
+        <h3 class='font-medium leading-tight text-2xl text-indigo-500'>Shorten, share and track</h3>
+        <p class='text-justify mt-2 text-base	'>
+          Your shortened URLs can be used in publications, documents, advertisements, blogs, forums, instant messages, and
+          other locations. Track statistics for your business and projects by monitoring the number of hits from your URL with
+          the click counter, you do not have to register.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class='my-12 w-3/4 mx-auto'>
+    <div class='md:flex md:flex-row text-center dark:text-white'>
+      <div class='md:w-1/3'>
+        <i class='fa fa-light fa-thumbs-up text-5xl'></i>
+        <h5 class='font-medium leading-tight text-xl m-5 text-blue'>Easy</h5>
+        <p class='font-small text-sm w-11/12 mx-auto'>ShortURL is easy and fast, enter the long link to get your shortened link</p>
+      </div>
+      
+      <div class='md:w-1/3'>
+        <i class='fa fa-light fa-link text-5xl'></i>
+        <h5 class='font-medium leading-tight text-xl m-5 text-blue'>Shortened</h5>
+        <p class='font-small text-sm	w-11/12 mx-auto'>Use any link, no matter what size, ShortURL always shortens</p>
+      </div>
+
+      <div class='md:w-1/3'>
+        <i class='fa fa-light fa-shield text-5xl'></i>
+        <h5 class='font-medium leading-tight text-xl m-5 text-blue'>Secure</h5>
+        <p class='font-small text-sm	w-11/12 mx-auto'>It is fast and secure, our service have HTTPS protocol and data encryption</p>
+      </div>
+    </div>
+    
+    <div class='md:flex md:flex-row text-center mt-12 dark:text-white'>
+      <div class='md:w-1/3'>
+        <i class='fa fa-light fa-chart-simple text-5xl'></i>
+        <h5 class='font-medium leading-tight text-xl m-5 text-blue'>Statistics</h5>
+        <p class='font-small text-sm w-11/12 mx-auto'>Check the amount of clicks that your shortened url received</p>
+      </div>
+      
+      <div class=':mdw-1/3'>
+        <i class='fa fa-light fa-hand text-5xl'></i>
+        <h5 class='font-medium leading-tight text-xl m-5 text-blue'>Reliable</h5>
+        <p class='font-small text-sm	w-11/12 mx-auto'>All links that try to disseminate spam, viruses and malware are deleted</p>
+      </div>
+
+      <div class='md:w-1/3'>
+        <i class='fa fa-light fa-computer text-5xl'></i>
+        <h5 class='font-medium leading-tight text-xl m-5 text-blue'>Devices</h5>
+        <p class='font-small text-sm	w-11/12 mx-auto'>Compatible with smartphones, tablets and desktop</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class='dark:bg-dark w-full border-indigo-500 border-t-4 h-20 my-20'>
+    <div class='w-3/4 text-center mx-auto'>
+      <p class='text-center mt-4 dark:text-white'>© 2022 ShortUrl.at - Tool to shorten a long link.</p>
+
+      <div class='my-4 dark:text-white w-1/5 ml-auto'>
+        <select class='form-select appearance-none
+          block
+          w-full
+          px-3
+          py-1.5
+          text-base
+          font-normal
+          text-gray-700
+          bg-white bg-clip-padding bg-no-repeat
+          border border-solid border-gray-300
+          rounded
+          transition
+          ease-in-out
+          m-0
+          focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none' 
+          data-action="change->home#themeChange"
+          >
+          <option value='auto'>Auto</option>
+          <option value='dark'>Dark Mode</option>
+          <option value='light'>Light Mode</option>
+        </select>
+      </div>
+      <div class='my-4 dark:text-white'>
+        <a class='w=1/5 border-r-2 px-4' href='#'>ShortUrl.at</a>
+        <a class='w=1/5 border-r-2 px-4' href='#'>URL Click Counter</a>
+        <a class='w=1/5 border-r-2 px-4' href='#'>Terms of Service</a>
+        <a class='w=1/5 border-r-2 px-4' href='#'>Privacy</a>
+        <a class='w=1/5 pl-4' href='#'>Contact</a>
+      </div>
+    </div>
+  </div>
+</div>
