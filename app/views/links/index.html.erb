@@ -1,26 +1,41 @@
 <div data-controller='home'>
   <div class='w-3/5 mx-auto'>
-    <h1 class='text-center font-medium leading-tight text-5xl mt-0 mb-2 text-blue-600 dark:text-indigo-500'>URL Shortner</h1>
+    <h1 class='text-center font-medium leading-tight text-5xl mt-0 mb-2 text-blue-600 dark:text-indigo-500'>URL Shortener</h1>
 
-    <%# Enter URL Box %>
     <div class='border-2 drop-shadow-lg dark:shadow-white border-indigo-500 rounded-lg text-center dark:text-white pb-10 mb-4'>
-      <h3 class=' font-medium leading-tight text-3xl m-5 text-blue-600 dark:text-indigo-500'>Paste the URL to be shortened</h3>
-      <div class='flex justify-center items-center mb-5'>
-        <div class='w-3/4 relative'> 
-            <div class='absolute top-3 left-3'>
-                <i class='fas fa-search text-gray-400 z-20 hover:text-gray-500'></i>
+      <h3 class='font-medium leading-tight text-3xl m-5 text-blue-600 dark:text-indigo-500'>Paste the URL to be shortened</h3>
+      <div class='w-100' data-home-target="hideable" hidden='true'>
+        <div class='flex'>
+          <div class='flex-1 w-full'>
+            <div class='flex'>
+              <p>Short link is <a href='' data-home-target='shortLink'></a></p>
             </div>
-          <input type='text' class='w-full pl-10 pr-20 h-12 rounded-lg z-0 focus:shadow focus:outline-none text-black' placeholder='Enter URL...'>
-            <div class='absolute top-0 right-0 bottom-0'>
-                <button class='px-5 pt-2 h-12 pb-3 text-white rounded-lg bg-blue-500 hover:bg-blue-600'>Shorten URL</button>
-            </div>
+          </div>
+          <div class='flex-1 w-full'><i class='fa fa-copy flex-row' data-action="click->home#copy"></i></div>
         </div>
       </div>
 
-      <p class='text-sm'>ShortURL.at is a free tool to shorten a URL or reduce a link</p>
+      <div class='flex justify-center items-center mb-5'>
+          <div class='w-3/4 relative'> 
+            <div class='absolute top-3 left-3'>
+              <i class='fas fa-search text-gray-400 z-20 hover:text-gray-500'></i>
+            </div>
+            <input type='text' class='w-full pl-10 pr-20 h-12 rounded-lg z-0 focus:shadow focus:outline-none text-black' 
+            placeholder='Enter URL...'
+            data-home-target='url'
+            >
+            <div class='absolute top-0 right-0 bottom-0'>
+              <button class='px-5 pt-2 h-12 pb-3 text-white rounded-lg bg-blue-500 hover:bg-blue-600'
+              data-action="click->home#createLink"
+              >Shorten URL</button>
+            </div>
+          </div>
+        <%# <% end > %>
+      </div>
+
+      <p class='text-sm'>UrlShortener is a free tool to shorten a URL or reduce a link</p>
       <p class='text-sm'>Use our URL Shortener to create a shortened link making it easy to remember</p>
     </div>
-    <%# Enter URL Box %>
 
     <div>
       <div class='px-4 m-5 mt-10 dark:text-white'>
@@ -88,7 +103,7 @@
 
   <div class='dark:bg-dark w-full border-indigo-500 border-t-4 h-20 my-20'>
     <div class='w-3/4 text-center mx-auto'>
-      <p class='text-center mt-4 dark:text-white'>© 2022 ShortUrl.at - Tool to shorten a long link.</p>
+      <p class='text-center mt-4 dark:text-white'>© 2022 UrlShortener - Tool to shorten a long link.</p>
 
       <div class='my-4 dark:text-white w-1/5 ml-auto'>
         <select class='form-select appearance-none
@@ -114,7 +129,7 @@
         </select>
       </div>
       <div class='my-4 dark:text-white'>
-        <a class='w=1/5 border-r-2 px-4' href='#'>ShortUrl.at</a>
+        <a class='w=1/5 border-r-2 px-4' href='#'>UrlShortener</a>
         <a class='w=1/5 border-r-2 px-4' href='#'>URL Click Counter</a>
         <a class='w=1/5 border-r-2 px-4' href='#'>Terms of Service</a>
         <a class='w=1/5 border-r-2 px-4' href='#'>Privacy</a>
